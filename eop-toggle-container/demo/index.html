@@ -26,13 +26,19 @@
       <demo-snippet>
         <template>
           <eop-toggle-container>
-            <div>
-              There should be some content here (default collapsed)!
+            <h3 slot="content_1">
+               Heading
+            </h3>
+            <div slot="content_2">
+                There should be some content here (default collapsed)!
             </div>
           </eop-toggle-container>
           
           <eop-toggle-container is-expanded>
-            <div>
+            <h3 slot="content_1">
+                Heading
+            </h3>
+            <div slot="content_2">
               There should be some content here (default expanded)!
             </div>
           </eop-toggle-container>

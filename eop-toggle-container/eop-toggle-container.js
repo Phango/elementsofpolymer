@@ -56,7 +56,8 @@ class MpToggleContainer extends PolymerElement {
         </button>
 
         <div class="toggle-container__content">
-          <slot></slot>
+          <slot name="content_1"></slot>
+          <slot name="content_2"></slot>
         </div>
 
       </section>
