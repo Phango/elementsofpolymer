@@ -1,7 +1,7 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 
 /**
- * `mp-toggle-container`
+ * `eop-toggle-container`
  * A toggle container, that will show/hide content depending on the interaction with the user
  *
  * @customElement
@@ -23,10 +23,10 @@ class MpToggleContainer extends PolymerElement {
     return {
       prop1: {
         type: String,
-        value: 'mp-toggle-container',
+        value: 'eop-toggle-container',
       },
     };
   }
 }
 
-window.customElements.define('mp-toggle-container', MpToggleContainer);
+window.customElements.define('eop-toggle-container', MpToggleContainer);

@@ -1,4 +1,4 @@
-# \<mp-toggle-container\>
+# \<eop-toggle-container\>
 
 A toggle container, that will show/hide content depending on the interaction with the user
 

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>mp-toggle-container test</title>
+    <title>eop-toggle-container test</title>
 
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/@polymer/test-fixture/test-fixture.js"></script>
@@ -12,31 +12,31 @@
     <script src="../node_modules/chai/chai.js"></script>
     <script src="../node_modules/wct-mocha/wct-mocha.js"></script>
 
-    <script type="module" src="../mp-toggle-container.js"></script>
+    <script type="module" src="../eop-toggle-container.js"></script>
   </head>
   <body>
 
     <test-fixture id="BasicTestFixture">
       <template>
-        <mp-toggle-container></mp-toggle-container>
+        <eop-toggle-container></eop-toggle-container>
       </template>
     </test-fixture>
 
     <test-fixture id="ChangedPropertyTestFixture">
       <template>
-        <mp-toggle-container prop1="new-prop1"></mp-toggle-container>
+        <eop-toggle-container prop1="new-prop1"></eop-toggle-container>
       </template>
     </test-fixture>
 
     <script type="module">
-      suite('mp-toggle-container', () => {
+      suite('eop-toggle-container', () => {
 
         test('instantiating the element with default properties works', () => {
           const element = fixture('BasicTestFixture');
-          assert.equal(element.prop1, 'mp-toggle-container');
+          assert.equal(element.prop1, 'eop-toggle-container');
           const elementShadowRoot = element.shadowRoot;
           const elementHeader = elementShadowRoot.querySelector('h2');
-          assert.equal(elementHeader.innerHTML, 'Hello mp-toggle-container!');
+          assert.equal(elementHeader.innerHTML, 'Hello eop-toggle-container!');
         });
 
         test('setting a property on the element works', () => {

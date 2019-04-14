@@ -1,7 +1,7 @@
 {
-  "name": "mp-toggle-container",
+  "name": "eop-toggle-container",
   "description": "A toggle container, that will show/hide content depending on the interaction with the user",
-  "main": "mp-toggle-container.js",
+  "main": "eop-toggle-container.js",
   "dependencies": {
     "@polymer/polymer": "^3.0.0"
   },
