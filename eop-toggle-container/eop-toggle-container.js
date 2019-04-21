@@ -1,4 +1,4 @@
-import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
+import { html, PolymerElement } from "@polymer/polymer/polymer-element.js";
 
 /**
  * `eop-toggle-container`
@@ -8,7 +8,7 @@ import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
  * @polymer
  * @demo demo/index.html
  */
-class MpToggleContainer extends PolymerElement {
+class EopToggleContainer extends PolymerElement {
   static get template() {
     return html`
       <style>
@@ -68,7 +68,7 @@ class MpToggleContainer extends PolymerElement {
     return {
       prop1: {
         type: String,
-        value: 'eop-toggle-container',
+        value: "eop-toggle-container"
       },
       isExpanded: {
         type: Boolean,
@@ -91,4 +91,4 @@ class MpToggleContainer extends PolymerElement {
   }
 }
 
-window.customElements.define('eop-toggle-container', MpToggleContainer);
+window.customElements.define("eop-toggle-container", EopToggleContainer);
