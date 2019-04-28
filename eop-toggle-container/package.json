@@ -3,7 +3,8 @@
   "description": "A toggle container, that will show/hide content depending on the interaction with the user",
   "main": "eop-toggle-container.js",
   "dependencies": {
-    "@polymer/polymer": "^3.0.0"
+    "@polymer/polymer": "^3.0.0",
+    "lit-element": "^2.1.0"
   },
   "devDependencies": {
     "@polymer/iron-demo-helpers": "^3.0.0-pre.19",
