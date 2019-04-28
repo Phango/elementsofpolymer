@@ -1,4 +1,4 @@
-import { html, PolymerElement } from "@polymer/polymer/polymer-element.js";
+import { LitElement, html, css } from "lit-element";
 
 /**
  * `eop-toggle-container`
@@ -8,50 +8,59 @@ import { html, PolymerElement } from "@polymer/polymer/polymer-element.js";
  * @polymer
  * @demo demo/index.html
  */
-class EopToggleContainer extends PolymerElement {
-  static get template() {
+class EopToggleContainer extends LitElement {
+  constructor() {
+    super();
+    this.prop1 = "eop-toggle-container";
+    this.expanded = false;
+    this.openText = 'Open';
+    this.closeText = 'Close';
+  }
+
+  static get styles() {
+    return css`
+    :host {
+      display: block;
+    }
+
+    .toggle-container__content {
+      display: none;
+    }
+
+    :host([expanded]) .toggle-container__content {
+      display: block;
+    }
+
+    .toggle-container__text--open {
+      display: inline-block;
+    }
+
+    :host([expanded]) .toggle-container__text--open {
+      display: none;
+    }
+
+    .toggle-container__text--close {
+      display: none;
+    }
+    
+    :host([expanded]) .toggle-container__text--close {
+      display: inline-block;
+    }
+  `;
+  }
+
+  render() {
     return html`
-      <style>
-        :host {
-          display: block;
-        }
-
-        .toggle-container__content {
-          display: none;
-        }
-
-        :host([is-expanded]) .toggle-container__content {
-          display: block;
-        }
-
-        .toggle-container__text--open {
-          display: inline-block;
-        }
-
-        :host([is-expanded]) .toggle-container__text--open {
-          display: none;
-        }
-
-        .toggle-container__text--close {
-          display: none;
-        }
-        
-        :host([is-expanded]) .toggle-container__text--close {
-          display: inline-block;
-        }
-
-      </style>
-
       <section class="toggle-container">
     
-        <h2>Hello [[prop1]]!</h2>
+        <h2>Hello ${this.prop1}!</h2>
 
-        <button on-click="handleClick">
+        <button @click="${this.handleClick}">
           <span class="toggle-container__text--open">
-            [[openText]]
+            ${this.openText}
           </span>
           <span class="toggle-container__text--close">
-            [[closeText]]
+            ${this.closeText}
           </span>
         </button>
 
@@ -61,33 +70,29 @@ class EopToggleContainer extends PolymerElement {
         </div>
 
       </section>
-      
     `;
   }
+
   static get properties() {
     return {
       prop1: {
-        type: String,
-        value: "eop-toggle-container"
+        type: String
       },
-      isExpanded: {
+      expanded: {
         type: Boolean,
-        value: false,
-        reflectToAttribute: true
+        reflect: true
       },
       openText: {
-        type: String,
-        value: "Open"
+        type: String
       },
       closeText: {
-        type: String,
-        value: "Close"
+        type: String
       }
     };
   }
 
   handleClick() {
-    this.isExpanded = !this.isExpanded;
+    this.expanded = !this.expanded;
   }
 }
 
